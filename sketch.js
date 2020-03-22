@@ -4,6 +4,7 @@ var ground, invisibleGround, groundImage;
 var cloudsGroup, cloudImage;
 var obstaclesGroup, obstacle1, obstacle2, obstacle3, obstacle4, obstacle5, obstacle6;
 
+var jumpSound;
 var score;
 
 
@@ -21,6 +22,8 @@ function preload(){
   obstacle4 = loadImage("obstacle4.png");
   obstacle5 = loadImage("obstacle5.png");
   obstacle6 = loadImage("obstacle6.png");
+  
+  jumpSound=loadSound("jump.mp3");
 }
 
 function setup() {
@@ -51,6 +54,7 @@ function draw() {
   text("Score: "+ score, 500,50);
   
   if(keyDown("space")) {
+    jumpSound.play();
     trex.velocityY = -10;
   }
   
