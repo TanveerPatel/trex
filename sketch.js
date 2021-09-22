@@ -51,6 +51,8 @@ function draw() {
   background(180);
   
   score = score + Math.round(getFrameRate()/60);
+  fill ("red")
+  textSize (20)
   text("Score: "+ score, 500,50);
   
   if(keyDown("space")) {
